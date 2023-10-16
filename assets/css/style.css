@@ -1,0 +1,25 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    font-family: Arial;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 150px;
+}
+
+button {
+    width: fit-content;
+}
+
+/* Start Page */
+.start-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.start-page-question {
+    max-width: 352px;
+}
+
