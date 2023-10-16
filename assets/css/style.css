@@ -26,11 +26,11 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
 
 .start-page-question {
     max-width: 352px;
+    margin: 40px 0 60px;
 }
 
 /* Question Container */
