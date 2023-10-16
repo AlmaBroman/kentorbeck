@@ -11,6 +11,14 @@ button {
     width: fit-content;
 }
 
+#hide {
+    display: none;
+}
+
+p {
+    margin: 0px;
+}
+
 /* Start Page */
 .start-page {
     display: flex;
@@ -23,3 +31,32 @@ button {
     max-width: 352px;
 }
 
+/* Question Container */
+
+.question-title {
+    margin-bottom: 0px;    
+}
+
+.question-title-eng {
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#options-container {
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0px;
+    align-items: center;
+}
+
+.opt-buttons {
+    padding: 5px 15px;
+    font-size: 1.5rem;
+}
+
+/* Score Container */
+#score-container {
+    margin-top: 100px;
+}

@@ -10,7 +10,7 @@
 <body>
     <header hidden>Kent or Beck</header>
 
-    <div class="start-page">
+    <div class="start-page" id="hide">
         <header>
             <h1>Kent or Beck?</h1>
         </header>
@@ -20,27 +20,28 @@
         <button>Start the quiz</button>
     </div>
 
-    <div id="question-container" hidden>
-        <header id="question-title">
-            <h1>Song/Movie Title goes here</h1>
-            <h2>"translation"</h2>
+    <div id="question-container">
+        <header id="question-header">
+            <h1 class="question-title">Song/Movie Title goes here</h1>
+            <h2 class="question-title-eng">"translation"</h2>
         </header>
         <div id="options-container">
-            <button id="opt-kent">Kent</button>
+            <button class="opt-buttons" id="opt-kent">Kent</button>
             <p>or</p>
-            <button id="opt-beck">Beck</button>
+            <button class="opt-buttons" id="opt-beck">Beck</button>
         </div>
-        <div id="answer-container">
+        <div id="answer-container" hidden>
             <i></i>
             <p>"right answer"</p>
             <p>"album/director, year"</p>
             <button>Next</button>
         </div>
-        <div id="score-container">
-            <p id="correct-answers"></p>
-            <p id="wrong-answers"></p>
-        </div>
     </div>
+
+    <div id="score-container">
+            <p id="correct-answers">Correct answers: 0</p>
+            <p id="wrong-answers">Wrong answers: 0</p>
+        </div>
 
     <div class="result-container" hidden>
         <header>
