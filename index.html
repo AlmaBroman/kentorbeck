@@ -12,13 +12,12 @@
 </head>
 <body>
     <!-- Hidden Header -->
-    <header hidden>Kent or Beck</header>
+    <header>
+        <h1>Kent or Beck?</h1>
+    </header>
 
     <!-- Start Page -->
-    <div class="start-page" id="hide">
-        <header>
-            <h1>Kent or Beck?</h1>
-        </header>
+    <div class="start-page">
         <p class="start-page-question">Do you know if the title shown is a Kent song or a
         movie in the Beck series?</p>
         <button>Instructions</button>
@@ -26,47 +25,55 @@
     </div>
 
     <!-- Question Container-->
-    <div id="question-container">
-        <!-- Question Title -->
-        <header id="question-header">
+    <div class="question-container" id="hide">
+        <!-- Question Header -->
+        <header>
             <h1 class="question-title">Song/Movie Title goes here</h1>
             <h2 class="question-title-eng">"translation"</h2>
         </header>
         <!-- Options Container-->
-        <div id="options-container">
+        <div class="options-container">
             <button class="opt-buttons" id="opt-kent">Kent</button>
             <p>or</p>
             <button class="opt-buttons" id="opt-beck">Beck</button>
         </div>
         
         <!-- Answer Container-->
-        <div id="answer-container" hidden>
-            <i></i>
+        <div id="answer-container">
+            <i class="fa-solid fa-face-smile symbol" style="color: #ffffff;"></i>
             <p>"right answer"</p>
             <p>"album/director, year"</p>
-            <button>Next</button>
+            <button class="next-btn">Next</button>
         </div>
     </div>
 
     <!-- Score container -->
-    <div id="score-container">
+    <div class="score-container" id="hide">
             <p id="correct-answers">Correct answers: 0</p>
             <p id="wrong-answers">Wrong answers: 0</p>
         </div>
 
     <!-- Results -->
-    <div class="result-container" hidden>
-        <header>
-            <h1>Kent or Beck?</h1>
-        </header>
-        <p>you completed the quiz!</p>
-        <div>score container</div>
+    <div class="result-container" id="hide">
+        <h2>You completed the quiz!</h2>
+        <div class="final-score-box">
+            <h3 class="final-score">Final Score</h3>
+            <p>Correct answers: 0
+                <br>
+                Wrong answers: 5
+            </p>
+        </div>
         <button>Restart the quiz</button>
+        <br>
         <button>Back to homepage</button>
     </div>
 
     <!-- Hidden Footer -->
     <footer hidden>Nothing to see here!</footer>
+
+    <!-- Font Awesome Kit-->
+    <script src="https://kit.fontawesome.com/bd539d3b84.js" crossorigin="anonymous"></script>
+    <!-- Java Script -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
