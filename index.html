@@ -11,7 +11,7 @@
     <title>Kent or Beck?</title>
 </head>
 <body>
-    <!-- Hidden Header -->
+    <!-- Header -->
     <header>
         <h1>Kent or Beck?</h1>
     </header>
@@ -20,9 +20,23 @@
     <div class="start-page">
         <p class="start-page-question">Do you know if the title shown is a Kent song or a
         movie in the Beck series?</p>
-        <button>Instructions</button>
+        <!-- Pop-up Button -->
+        <button id="open-pop-up">Instructions</button>
         <br>
         <button>Start the quiz</button>
+        <!-- Pop-up content -->
+        <div id="pop-up-box" class="pop-up">
+            <div class="pop-up-content">
+                <span class="close-pop-up"><i class="fa-solid fa-x" style="color: #ffffff;"></i></span>
+                <h3>Instructions</h3>
+                <p>Each turn you will be presented with a title and two buttons labeled "Kent" and "Beck".</p>
+                <p>Press "Kent" if you think it is the title of a song<br>
+                    or<br>
+                    press "Beck" if you think it is the title of a movie.</p>
+                <p>The right answer will then be shown and a button to proceed to the next title.</p>
+                <p>The game includes 40+ titles so feel free to play again and again!</p>
+            </div>
+        </div>
     </div>
 
     <!-- Question Container-->
@@ -42,8 +56,10 @@
         <!-- Answer Container-->
         <div id="answer-container">
             <i class="fa-solid fa-face-smile symbol" style="color: #ffffff;"></i>
-            <p>"right answer"</p>
-            <p>"album/director, year"</p>
+            <div>
+                <p>"right answer"</p>
+                <p>"album/director, year"</p>
+            </div>
             <button class="next-btn">Next</button>
         </div>
     </div>
@@ -55,7 +71,7 @@
         </div>
 
     <!-- Results -->
-    <div class="result-container" id="hide">
+    <div class="results-container" id="hide">
         <h2>You completed the quiz!</h2>
         <div class="final-score-box">
             <h3 class="final-score">Final Score</h3>
