@@ -17,10 +17,6 @@ p {
     margin: 0px;
 }
 
-#hide {
-    display: none;
-}
-
 /* Start Page */
 .start-page {
     display: flex;
@@ -118,6 +114,11 @@ p {
 
 .final-score {
     margin-bottom: 5px;
+}
+
+/* Overwrites visibility of elements */
+.hide {
+    display: none;
 }
 
 /* Media query: tablets and larger (768px and up) */
