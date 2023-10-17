@@ -7,6 +7,7 @@ const startPage = document.getElementsByClassName("start-page")[0];
 const questionContainer = document.getElementsByClassName("question-container")[0];
 const scoreContainer = document.getElementsByClassName("score-container")[0];
 
+//functions for pop up button
 popUpButton.onclick = function() {
     popUp.style.display = "block";
 }
@@ -21,6 +22,10 @@ window.onclick = function(event) {
     }
 }
 
+/**
+ * Button to start the quiz.
+ * Hides startpage and un-hides questions.
+ */
 startButton.addEventListener("click", function() {
     gameTitle.classList.add("hide");
     startPage.classList.add("hide");
