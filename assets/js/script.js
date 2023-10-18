@@ -65,6 +65,7 @@ restartButton.addEventListener("click", function() {
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
     questionButtons.classList.remove("hide");
+    gameTitle.classList.add("hide");
 });
 
 // Home button
