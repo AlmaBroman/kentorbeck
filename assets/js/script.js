@@ -23,12 +23,9 @@ const questions = [
     },
 ];
 
-/**
- * Gets a random question from questions array
- */
-function randomQuestions(questions) {
-    return questions[Math.floor(Math.random()*questions.length)];
-}
+//questions-page ids
+document.getElementById("question-header").innerHTML = randomQuestions.name;
+document.getElementById("question-transl").innerHTML = '"' + questions[0].transl + '"';
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -54,4 +51,8 @@ startButton.addEventListener("click", function() {
     startPage.classList.add("hide");
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
+    function randomQuestions(questions) {
+        return questions[Math.floor(Math.random() * questions.length)];
+    };
+    return randomQuestions;
 });
