@@ -96,6 +96,13 @@ homeButton.addEventListener("click", function() {
  */
 function randomQuestions(questions) {
     return questions[Math.floor(Math.random() * questions.length)];
+
+    for (question of questions) {
+    let questionTitle = question.name;
+    let questionTransl = question.transl;
+    let questionDirOrAlb = question.DirOrAlb;
+    let questionYear = question.year;
+    let questionIsSong = question.isSong;
 }
 
 function checkAnswer() {
