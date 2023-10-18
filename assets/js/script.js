@@ -47,8 +47,4 @@ startButton.addEventListener("click", function() {
     startPage.classList.add("hide");
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
-    function randomQuestions(questions) {
-        return questions[Math.floor(Math.random() * questions.length)];
-    };
-    return randomQuestions;
 });
