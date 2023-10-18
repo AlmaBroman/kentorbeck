@@ -6,6 +6,29 @@ const gameTitle = document.getElementsByClassName("game-title")[0];
 const startPage = document.getElementsByClassName("start-page")[0];
 const questionContainer = document.getElementsByClassName("question-container")[0];
 const scoreContainer = document.getElementsByClassName("score-container")[0];
+const questions = [
+    { 
+        name: 'Den Osynlige Mannen', 
+        transl: 'The Invisible Man', 
+        dirOrAlb: 'Kent', 
+        year: '1995', 
+        isSong: 'yes', 
+    }, 
+    { 
+        name: 'Lockpojken', 
+        transl: 'The Decoy Boy', 
+        dirOrAlb: 'Pelle Seth',
+        year: '1997',  
+        isSong: 'no',  
+    },
+];
+
+/**
+ * Gets a random question from questions array
+ */
+function randomQuestions(questions) {
+    return questions[Math.floor(Math.random()*questions.length)];
+}
 
 //functions for pop up button
 popUpButton.onclick = function() {
