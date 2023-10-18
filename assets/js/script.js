@@ -22,6 +22,26 @@ window.onclick = function(event) {
     }
 }
 
+function checkAnswer() {
+
+};
+
+function calculateCorrectAnswer() {
+
+};
+
+function addToCorrectCount() {
+
+};
+
+function addToWrongCount() {
+    
+};
+
+function displayStartPage() {
+
+};
+
 /**
  * Button to start the quiz.
  * Hides startpage and un-hides questions.
@@ -32,3 +52,23 @@ startButton.addEventListener("click", function() {
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
 });
+
+function displayquestion() {
+    
+};
+
+function checkAnswer() {
+
+};
+
+function displayAnswer() {
+
+};
+
+function displayScore() {
+
+};
+
+function displayResult() {
+
+};
