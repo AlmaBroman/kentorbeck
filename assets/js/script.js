@@ -11,7 +11,23 @@ const answerContainer = document.getElementById("answer-container");
 const nextButton = document.getElementsByClassName("next-button")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
 const restartButton = document.getElementById("restart-button");
-const homeButton = document.getElementById("home-button")
+const homeButton = document.getElementById("home-button");
+const questions = [
+    {
+        name: 'Den Osynlige Mannen',
+        transl: 'The Invisible Man',
+        dirOrAlb: 'Kent',
+        year: '1995',
+        isSong: 'yes',
+    },
+    {
+        name: 'Lockpojken',
+        transl: 'The Decoy Boy',
+        dirOrAlb: 'Pelle Seth',
+        year: '1997',
+        isSong: 'no',
+    },
+];
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -73,6 +89,10 @@ homeButton.addEventListener("click", function() {
     resultContainer.classList.add("hide");
     startPage.classList.remove("hide");
 });
+
+function runGame() {
+
+}; 
 
 function checkAnswer() {
 
