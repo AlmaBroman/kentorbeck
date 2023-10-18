@@ -90,9 +90,13 @@ homeButton.addEventListener("click", function() {
     startPage.classList.remove("hide");
 });
 
-function runGame() {
-
-}; 
+/**
+ * get questions from questions array
+ * returns random question
+ */
+function randomQuestions(questions) {
+    return questions[Math.floor(Math.random() * questions.length)];
+}
 
 function checkAnswer() {
 
