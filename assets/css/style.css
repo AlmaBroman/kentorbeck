@@ -24,7 +24,7 @@ p {
     align-items: center;
 }
 
-.start-page-question {
+.start-page-text {
     max-width: 352px;
     margin: 40px 0 60px;
 }
@@ -73,7 +73,7 @@ p {
     font-weight: 400;
 }
 
-.options-container {
+.question-buttons {
     display:flex;
     justify-content: center;
     gap: 10px;
@@ -81,7 +81,7 @@ p {
     align-items: center;
 }
 
-.opt-buttons {
+.question-button {
     padding: 5px 15px;
     font-size: 1.5rem;
 }
@@ -92,7 +92,7 @@ p {
 }
 
 /* Answer Container */
-.symbol {
+.answer-icon {
     font-size: xxx-large;
     padding-bottom: 20px;
 }

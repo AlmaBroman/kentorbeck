@@ -18,7 +18,7 @@
 
     <!-- Start Page -->
     <div class="start-page">
-        <p class="start-page-question">Do you know if the title shown is a Kent song or a
+        <p class="start-page-text">Do you know if the title shown is a Kent song or a
             movie in the Beck series?</p>
         <button id="open-pop-up">Instructions</button>
         <!-- Pop-up content -->
@@ -47,31 +47,32 @@
             <h2 class="question-title-eng" id="question-transl">${questions.transl}</h2>
         </header>
         <!-- Options Container-->
-        <div class="options-container">
-            <button class="opt-buttons" id="opt-kent">Kent</button>
+        <div class="question-buttons">
+            <button class="question-button" id="opt-kent">Kent</button>
             <p>or</p>
-            <button class="opt-buttons" id="opt-beck">Beck</button>
+            <button class="question-button" id="opt-beck">Beck</button>
+        </div>
+
+        <!-- Score container -->
+        <div class="score-container hide">
+            <p id="correct-answers">Correct answers: 0</p>
+            <p id="wrong-answers">Wrong answers: 0</p>
         </div>
         
         <!-- Answer Container-->
         <div id="answer-container" class="hide">
-            <i class="fa-solid fa-face-smile symbol" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-face-smile answer-icon" id="smile" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-skull answer-icon" id="skull" style="color: #ffffff;"></i>
             <div>
                 <p>"right answer"</p>
-                <p>${questions.DirOrAlb}, ${questions.year}</p>
+                <p>"DirOrAlb", "year"</p>
             </div>
             <button class="next-btn">Next</button>
         </div>
     </div>
 
-    <!-- Score container -->
-    <div class="score-container hide">
-            <p id="correct-answers">Correct answers: 0</p>
-            <p id="wrong-answers">Wrong answers: 0</p>
-        </div>
-
     <!-- Results -->
-    <div class="results-container hide">
+    <div class="result-container hide">
         <h2>You completed the quiz!</h2>
         <div class="final-score-box">
             <h3 class="final-score">Final Score</h3>

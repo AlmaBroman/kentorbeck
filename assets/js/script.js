@@ -6,6 +6,8 @@ const gameTitle = document.getElementsByClassName("game-title")[0];
 const startPage = document.getElementsByClassName("start-page")[0];
 const questionContainer = document.getElementsByClassName("question-container")[0];
 const scoreContainer = document.getElementsByClassName("score-container")[0];
+const questionButtons = document.getElementsByClassName("question-buttons")[0];
+const answerContainer = document.getElementById("answer-container");
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -21,6 +23,22 @@ window.onclick = function(event) {
         popUp.style.display = "none";
     }
 }
+
+// Buttons to start the quiz.
+
+//Start button - hides startpage and un-hides questions.
+startButton.addEventListener("click", function() {
+    gameTitle.classList.add("hide");
+    startPage.classList.add("hide");
+    questionContainer.classList.remove("hide");
+    scoreContainer.classList.remove("hide");
+});
+
+questionButtons.addEventListener("click", function(){
+    questionButtons.classList.add("hide");
+    answerContainer.classList.remove("hide");
+});
+
 
 function checkAnswer() {
 
@@ -41,17 +59,6 @@ function addToWrongCount() {
 function displayStartPage() {
 
 };
-
-/**
- * Button to start the quiz.
- * Hides startpage and un-hides questions.
- */
-startButton.addEventListener("click", function() {
-    gameTitle.classList.add("hide");
-    startPage.classList.add("hide");
-    questionContainer.classList.remove("hide");
-    scoreContainer.classList.remove("hide");
-});
 
 function displayquestion() {
     
