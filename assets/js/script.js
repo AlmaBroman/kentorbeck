@@ -8,6 +8,8 @@ const questionContainer = document.getElementsByClassName("question-container")[
 const scoreContainer = document.getElementsByClassName("score-container")[0];
 const questionButtons = document.getElementsByClassName("question-buttons")[0];
 const answerContainer = document.getElementById("answer-container");
+const nextButton = document.getElementsByClassName("next-button")[0];
+const resultContainer = document.getElementsByClassName("result-container")[0];
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -34,11 +36,31 @@ startButton.addEventListener("click", function() {
     scoreContainer.classList.remove("hide");
 });
 
+//question buttons - hides buttons, shows answer.
 questionButtons.addEventListener("click", function(){
     questionButtons.classList.add("hide");
     answerContainer.classList.remove("hide");
 });
 
+//Next Button - hides answer-container
+nextButton.addEventListener("click", function() {
+    /** 
+     * if not last question... if last question...
+     * answerContainer.classList.add("hide");
+     * if() {
+        questionButtons.classList.remove("hide");
+    } else {
+        questionContainer.classList.add("hide");
+        scoreContainer.classList.add("hide");
+        gameTitle.classList.remove("hide");
+        resultContainer.classList.remove("hide");
+    }*/
+    answerContainer.classList.add("hide");
+    questionContainer.classList.add("hide");
+    scoreContainer.classList.add("hide");
+    gameTitle.classList.remove("hide");
+    resultContainer.classList.remove("hide");
+});
 
 function checkAnswer() {
 
