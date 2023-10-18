@@ -12,22 +12,6 @@ const nextButton = document.getElementsByClassName("next-button")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
 const restartButton = document.getElementById("restart-button");
 const homeButton = document.getElementById("home-button");
-const questions = [
-    {
-        name: 'Den Osynlige Mannen',
-        transl: 'The Invisible Man',
-        dirOrAlb: 'Kent',
-        year: '1995',
-        isSong: 'yes',
-    },
-    {
-        name: 'Lockpojken',
-        transl: 'The Decoy Boy',
-        dirOrAlb: 'Pelle Seth',
-        year: '1997',
-        isSong: 'no',
-    },
-];
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -91,19 +75,13 @@ homeButton.addEventListener("click", function() {
 });
 
 /**
- * get questions from questions array
+ * get question from questions array
  * returns random question
  */
-function randomQuestions(questions) {
+function randomQuestion(questions) {
     return questions[Math.floor(Math.random() * questions.length)];
-
-    for (question of questions) {
-    let questionTitle = question.name;
-    let questionTransl = question.transl;
-    let questionDirOrAlb = question.DirOrAlb;
-    let questionYear = question.year;
-    let questionIsSong = question.isSong;
-}
+    document.getElementById('question-title').innerHTML = this.name;
+};
 
 function checkAnswer() {
 
