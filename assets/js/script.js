@@ -23,10 +23,6 @@ const questions = [
     },
 ];
 
-//questions-page ids
-document.getElementById("question-header").innerHTML = randomQuestions.name;
-document.getElementById("question-transl").innerHTML = '"' + questions[0].transl + '"';
-
 //functions for pop up button
 popUpButton.onclick = function() {
     popUp.style.display = "block";
