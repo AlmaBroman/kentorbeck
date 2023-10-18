@@ -10,6 +10,8 @@ const questionButtons = document.getElementsByClassName("question-buttons")[0];
 const answerContainer = document.getElementById("answer-container");
 const nextButton = document.getElementsByClassName("next-button")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
+const restartButton = document.getElementById("restart-button");
+const homeButton = document.getElementById("home-button")
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -34,6 +36,7 @@ startButton.addEventListener("click", function() {
     startPage.classList.add("hide");
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
+    questionButtons.classList.remove("hide");
 });
 
 //question buttons - hides buttons, shows answer.
@@ -45,21 +48,29 @@ questionButtons.addEventListener("click", function(){
 //Next Button - hides answer-container
 nextButton.addEventListener("click", function() {
     /** 
-     * if not last question... if last question...
+     * if not last question do: 
      * answerContainer.classList.add("hide");
-     * if() {
-        questionButtons.classList.remove("hide");
-    } else {
-        questionContainer.classList.add("hide");
-        scoreContainer.classList.add("hide");
-        gameTitle.classList.remove("hide");
-        resultContainer.classList.remove("hide");
+     * questionButtons.classList.remove("hide");
     }*/
     answerContainer.classList.add("hide");
     questionContainer.classList.add("hide");
     scoreContainer.classList.add("hide");
     gameTitle.classList.remove("hide");
     resultContainer.classList.remove("hide");
+});
+
+//Restart button
+restartButton.addEventListener("click", function() {
+    resultContainer.classList.add("hide");
+    questionContainer.classList.remove("hide");
+    scoreContainer.classList.remove("hide");
+    questionButtons.classList.remove("hide");
+});
+
+// Home button
+homeButton.addEventListener("click", function() {
+    resultContainer.classList.add("hide");
+    startPage.classList.remove("hide");
 });
 
 function checkAnswer() {
