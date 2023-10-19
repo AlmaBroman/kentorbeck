@@ -7,6 +7,9 @@ let correctAnswer = document.getElementById("answer-is");
 let questionTitle = document.getElementById("question-title");
 let questionTransl = document.getElementById("question-transl");
 let questionInfo = document.getElementById("answer-info");
+//var for score/results
+let currentNumberCorrect = document.getElementById("correct-answers");
+let currentNumberWrong = document.getElementById("wrong-answers")
 let numCorrect = 0;
 let numWrong = 0;
 //var for eventlisteners buttons
@@ -15,6 +18,8 @@ const nextButton = document.getElementsByClassName("next-button")[0];
 const questionButtons = document.getElementsByClassName("question-buttons")[0];
 const restartButton = document.getElementById("restart-button");
 const homeButton = document.getElementById("home-button");
+const questionHeader = document.getElementById("question-header");
+const resultMessage = document.getElementById("result-message");
 //var for containers
 const gameTitle = document.getElementsByClassName("game-title")[0];
 const startPage = document.getElementsByClassName("start-page")[0];
@@ -77,10 +82,12 @@ nextButton.addEventListener("click", function() {
     
     /**if not last question */
     answerContainer.classList.add("hide");
-    questionContainer.classList.add("hide");
-    scoreContainer.classList.add("hide");
+    //questionContainer.classList.add("hide");
+    //scoreContainer.classList.add("hide");
+    questionHeader.classList.add("hide");
     gameTitle.classList.remove("hide");
     resultContainer.classList.remove("hide");
+    resultMessage.classList.remove("hide");
 });
 
 //Restart button
@@ -90,6 +97,9 @@ restartButton.addEventListener("click", function() {
     scoreContainer.classList.remove("hide");
     questionButtons.classList.remove("hide");
     gameTitle.classList.add("hide");
+    questionHeader.classList.remove("hide");
+    resultContainer.classList.add("hide");
+    resultMessage.classList.add("hide");
 });
 
 // Home button
