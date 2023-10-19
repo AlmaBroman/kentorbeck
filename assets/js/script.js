@@ -133,3 +133,4 @@ function displayScore() {
 function displayResult() {
 
 };
+
