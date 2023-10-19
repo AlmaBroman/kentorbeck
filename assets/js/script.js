@@ -12,6 +12,9 @@ const nextButton = document.getElementsByClassName("next-button")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
 const restartButton = document.getElementById("restart-button");
 const homeButton = document.getElementById("home-button");
+let questionTitle = document.getElementById("question-title");
+let questionTransl = document.getElementById("question-transl");
+let questionInfo = document.getElementById("answer-info");
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -31,7 +34,7 @@ window.onclick = function(event) {
 // Buttons to start the quiz.
 
 //Start button - hides startpage and un-hides questions.
-startButton.addEventListener("click", runGame {
+startButton.addEventListener("click", function() {
     gameTitle.classList.add("hide");
     startPage.classList.add("hide");
     questionContainer.classList.remove("hide");
@@ -39,7 +42,7 @@ startButton.addEventListener("click", runGame {
     questionButtons.classList.remove("hide");
 });
 
-//Eventlisteners
+//Eventlisteners to show/hide e
 //question buttons - hides buttons, shows answer.
 questionButtons.addEventListener("click", function(){
     questionButtons.classList.add("hide");
@@ -80,13 +83,16 @@ function runGame() {
 };
 
 /**
- * get question from questions array
- * returns random question
+ * displays questions + transl + info
  */
-function randomQuestion(questions) {
-    return questions[Math.floor(Math.random() * questions.length)];
-    document.getElementById('question-title').innerHTML = this.name;
+function displayQuestion() {
+    questions.forEach( (currentQuestion, questionIndex) => {
+        questionTitle.innerHTML = currentQuestion.name;
+        questionTransl.innerHTML = currentQuestion.transl;
+        questionInfo.innerHTML = currentQuestion.info;
+    });
 };
+displayQuestion()
 
 function checkAnswer() {
 
@@ -106,10 +112,6 @@ function addToWrongCount() {
 
 function displayStartPage() {
 
-};
-
-function displayquestion() {
-    
 };
 
 function displayAnswer() {
