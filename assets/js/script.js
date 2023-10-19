@@ -3,6 +3,7 @@ let popUp = document.getElementById("pop-up-box");
 let popUpButton = document.getElementById("open-pop-up");
 let popUpClose = document.getElementsByClassName("close-pop-up")[0];
 //var for questions
+let correctAnswer = document.getElementById("answer-is");
 let questionTitle = document.getElementById("question-title");
 let questionTransl = document.getElementById("question-transl");
 let questionInfo = document.getElementById("answer-info");
@@ -56,6 +57,8 @@ startButton.addEventListener("click", function() {
 questionButtons.addEventListener("click", function(){
     questionButtons.classList.add("hide");
     answerContainer.classList.remove("hide");
+    compareAnswer();
+    
 });
 
 //Next Button - hides answer-container
@@ -93,15 +96,17 @@ function runGame() {
 };
 
 /**
- * displays questions + transl + info
+ * displays questions + transl + info + answer
  */
 function displayQuestion() {
     questions.forEach( (currentQuestion, questionNumber) => {
         questionTitle.innerHTML = currentQuestion.name;
         questionTransl.innerHTML = currentQuestion.transl;
         questionInfo.innerHTML = currentQuestion.info;
+        correctAnswer.innerHTML = currentQuestion.answer
     });
 };
+displayQuestion()
 displayQuestion()
 
 /**
@@ -111,7 +116,7 @@ displayQuestion()
 function compareAnswer() {
     kentButton = 'Kent';
     beckButton = 'Beck';
-    if (kentButton === currentQuestion.answer || beckButton === currentQuestion.answer){
+    if (kentButton === correctAnswer.innerHTML || beckButton === correctAnswer.innerHTML){
         numCorrect ++;
     } else {
         numWrong ++;
