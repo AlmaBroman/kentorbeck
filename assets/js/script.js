@@ -70,10 +70,17 @@ nextButton.addEventListener("click", function() {
      * scoreContainer.classList.add("hide");
      * gameTitle.classList.remove("hide");
      * resultContainer.classList.remove("hide");
-    }*/
+     * else: 
+     *  answerContainer.classList.add("hide");
+     * questionButtons.classList.remove("hide");
+     */
     
+    /**if not last question */
     answerContainer.classList.add("hide");
-    questionButtons.classList.remove("hide");
+    questionContainer.classList.add("hide");
+    scoreContainer.classList.add("hide");
+    gameTitle.classList.remove("hide");
+    resultContainer.classList.remove("hide");
 });
 
 //Restart button
@@ -99,12 +106,27 @@ function runGame() {
  * displays questions + transl + info + answer
  */
 function displayQuestion() {
-    questions.forEach( (currentQuestion, questionNumber) => {
-        questionTitle.innerHTML = currentQuestion.name;
-        questionTransl.innerHTML = currentQuestion.transl;
-        questionInfo.innerHTML = currentQuestion.info;
-        correctAnswer.innerHTML = currentQuestion.answer
+    questions.forEach( 
+        (currentQuestion, questionNumber) => {
+            
+            //variables to store list items
+            const name = [];
+            const question = [];
+            const info = [];
+            const answer = [];
+            
+            questionTitle.innerHTML = currentQuestion.name;
+            questionTransl.innerHTML = currentQuestion.transl;
+            questionInfo.innerHTML = currentQuestion.info;
+            correctAnswer.innerHTML = currentQuestion.answer;
     });
+    //make array items appear in html
+    /**
+     * questionTitle.innerHTML = currentQuestion.name;
+     * questionTransl.innerHTML = currentQuestion.transl;
+     * questionInfo.innerHTML = currentQuestion.info;
+     * correctAnswer.innerHTML = currentQuestion.answer;
+     */
 };
 displayQuestion()
 displayQuestion()
