@@ -2,7 +2,17 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
-function buildQuiz(){};
+function buildQuiz(){
+    const output = [];
+
+    myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
+            const answers = [];
+
+        }
+    );
+};
+
 function showResults(){};
 
 //call the function
