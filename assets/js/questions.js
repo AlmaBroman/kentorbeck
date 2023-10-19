@@ -6,6 +6,30 @@ const questions = [
         answer: 'Kent',
     },
     {
+        name: 'Pojken med Hålet I Handen',
+        transl: 'The Boy with a Hole in his Hand',
+        info: 'Kent, 1995',
+        answer: 'Kent',
+    },
+    {
+        name: 'Stenbrott',
+        transl: 'Quarry',
+        info: 'Kent, 1995',
+        answer: 'Kent',
+    },
+    {
+        name: 'Avtryck',
+        transl: 'Imprint',
+        info: 'Verkligen, 1996',
+        answer: 'Kent',
+    },
+    {
+        name: 'En Timme en Minut',
+        transl: 'One Hour One Minute',
+        info: 'Verkligen, 1996',
+        answer: 'Kent',
+    },
+    {
         name: 'Lockpojken',
         transl: '"The Decoy Boy"',
         info: '(Pelle Seth, 1997)',
