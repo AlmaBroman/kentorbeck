@@ -55,6 +55,7 @@ startButton.addEventListener("click", function() {
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
     questionButtons.classList.remove("hide");
+    questionHeader.classList.remove("hide");
 });
 
 //Eventlisteners to show/hide e
@@ -106,6 +107,9 @@ restartButton.addEventListener("click", function() {
 homeButton.addEventListener("click", function() {
     resultContainer.classList.add("hide");
     startPage.classList.remove("hide");
+    resultContainer.classList.add("hide");
+    resultMessage.classList.add("hide");
+    questionContainer.classList.add("hide")
 });
 
 function runGame() {
