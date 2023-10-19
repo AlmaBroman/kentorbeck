@@ -11,6 +11,13 @@ button {
     width: fit-content;
     font-size: medium;
     padding: 5px 10px;
+    border: solid #fff;
+}
+
+button:hover {
+    border: solid rgb(201, 218, 232);
+    background-color: rgb(201, 218, 232);
+    cursor: pointer;
 }
 
 p {
