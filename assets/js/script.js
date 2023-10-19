@@ -31,7 +31,7 @@ window.onclick = function(event) {
 // Buttons to start the quiz.
 
 //Start button - hides startpage and un-hides questions.
-startButton.addEventListener("click", function() {
+startButton.addEventListener("click", runGame {
     gameTitle.classList.add("hide");
     startPage.classList.add("hide");
     questionContainer.classList.remove("hide");
@@ -39,6 +39,7 @@ startButton.addEventListener("click", function() {
     questionButtons.classList.remove("hide");
 });
 
+//Eventlisteners
 //question buttons - hides buttons, shows answer.
 questionButtons.addEventListener("click", function(){
     questionButtons.classList.add("hide");
@@ -74,6 +75,10 @@ homeButton.addEventListener("click", function() {
     startPage.classList.remove("hide");
 });
 
+function runGame() {
+
+};
+
 /**
  * get question from questions array
  * returns random question
@@ -105,10 +110,6 @@ function displayStartPage() {
 
 function displayquestion() {
     
-};
-
-function checkAnswer() {
-
 };
 
 function displayAnswer() {
