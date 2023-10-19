@@ -1,6 +1,11 @@
 let popUp = document.getElementById("pop-up-box");
 let popUpButton = document.getElementById("open-pop-up");
 let popUpClose = document.getElementsByClassName("close-pop-up")[0];
+let questionTitle = document.getElementById("question-title");
+let questionTransl = document.getElementById("question-transl");
+let questionInfo = document.getElementById("answer-info");
+let numCorrect = 0;
+let numWrong = 0;
 const startButton = document.getElementById("start-button");
 const gameTitle = document.getElementsByClassName("game-title")[0];
 const startPage = document.getElementsByClassName("start-page")[0];
@@ -12,9 +17,8 @@ const nextButton = document.getElementsByClassName("next-button")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
 const restartButton = document.getElementById("restart-button");
 const homeButton = document.getElementById("home-button");
-let questionTitle = document.getElementById("question-title");
-let questionTransl = document.getElementById("question-transl");
-let questionInfo = document.getElementById("answer-info");
+const kentButton = document.getElementById("opt-kent");
+const beckButton = document.getElementById("opt-beck");
 
 //functions for pop up button
 popUpButton.onclick = function() {
@@ -87,7 +91,7 @@ function runGame() {
  * displays questions + transl + info
  */
 function displayQuestion() {
-    questions.forEach( (currentQuestion, questionIndex) => {
+    questions.forEach( (currentQuestion, questionNumber) => {
         questionTitle.innerHTML = currentQuestion.name;
         questionTransl.innerHTML = currentQuestion.transl;
         questionInfo.innerHTML = currentQuestion.info;
@@ -96,22 +100,17 @@ function displayQuestion() {
 displayQuestion()
 
 /**
- * compares userAnswer with correctAnswer
+ * compares answer(button) with correctAnswer
+ * and counts correct/wrong answers
  */
 function compareAnswer() {
-
-};
-
-function calculateCorrectAnswer() {
-
-};
-
-function addToCorrectCount() {
-
-};
-
-function addToWrongCount() {
-    
+    kentButton = 'Kent';
+    beckButton = 'Beck';
+    if (kentButton === currentQuestion.answer || beckButton === currentQuestion.answer){
+        numCorrect ++;
+    } else {
+        numWrong ++;
+    };
 };
 
 function displayStartPage() {
