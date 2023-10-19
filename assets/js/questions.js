@@ -4,13 +4,13 @@ const questions = [
         transl: 'The Invisible Man',
         dirOrAlb: 'Kent',
         year: '1995',
-        isSong: 'yes',
+        isSong: true,
     },
     {
         name: 'Lockpojken',
         transl: 'The Decoy Boy',
         dirOrAlb: 'Pelle Seth',
         year: '1997',
-        isSong: 'no',
+        isSong: false,
     },
 ];
