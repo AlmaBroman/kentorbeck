@@ -95,6 +95,9 @@ function displayQuestion() {
 };
 displayQuestion()
 
+/**
+ * compares userAnswer with correctAnswer
+ */
 function compareAnswer() {
 
 };
