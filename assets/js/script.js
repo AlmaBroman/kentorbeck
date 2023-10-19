@@ -52,15 +52,16 @@ questionButtons.addEventListener("click", function(){
 //Next Button - hides answer-container
 nextButton.addEventListener("click", function() {
     /** 
-     * if not last question do: 
+     * if last question do: 
      * answerContainer.classList.add("hide");
-     * questionButtons.classList.remove("hide");
+     * questionContainer.classList.add("hide");
+     * scoreContainer.classList.add("hide");
+     * gameTitle.classList.remove("hide");
+     * resultContainer.classList.remove("hide");
     }*/
+    
     answerContainer.classList.add("hide");
-    questionContainer.classList.add("hide");
-    scoreContainer.classList.add("hide");
-    gameTitle.classList.remove("hide");
-    resultContainer.classList.remove("hide");
+    questionButtons.classList.remove("hide");
 });
 
 //Restart button
@@ -94,7 +95,7 @@ function displayQuestion() {
 };
 displayQuestion()
 
-function checkAnswer() {
+function compareAnswer() {
 
 };
 
