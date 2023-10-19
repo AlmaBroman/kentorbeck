@@ -158,6 +158,10 @@ function compareAnswer() {
         numWrong ++;
     };
 };
+//compareAnswer()
+
+//currentNumberCorrect.innerHTML = 'Correct answers: ' + numCorrect;
+//currentNumberWrong.innerHTML = 'Wrong answers: ' + numWrong;
 
 function displayStartPage() {
 
