@@ -8,7 +8,7 @@ This is a quiz designed to test if you can differ a song title from a movie titl
 
 ![Wireframe img](readme-assets/kent-or-beck-wireframe.png)
 
-**Wireframe**
+## Wireframe
 
 - The wireframe was designed using Balsamiq software.
 
