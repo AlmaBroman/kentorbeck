@@ -2,8 +2,7 @@
 let popUp = document.getElementById("pop-up-box");
 let popUpButton = document.getElementById("open-pop-up");
 let popUpClose = document.getElementsByClassName("close-pop-up")[0];
-//var for questions
-let correctAnswer = document.getElementById("answer-is");
+//var for getQuestion
 let questionTitle = document.getElementById("question-title");
 let questionTransl = document.getElementById("question-transl");
 let questionInfo = document.getElementById("answer-info");
@@ -13,37 +12,32 @@ let currentNumberCorrect = document.getElementById("correct-answers");
 let currentNumberWrong = document.getElementById("wrong-answers");
 let numCorrect = 0;
 let numWrong = 0;
+let smile = document.getElementById("smile");
+let skull = document.getElementById("skull");
 //var for options buttons
 const kentButton = document.getElementById("opt-kent");
 const beckButton = document.getElementById("opt-beck");
-//var for eventlisteners buttons
+//var for eventlistener buttons
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementsByClassName("next-button")[0];
 const questionButtons = document.getElementsByClassName("question-buttons")[0];
 const restartButton = document.getElementById("restart-button");
 const homeButton = document.getElementById("home-button");
-const questionHeader = document.getElementById("question-header");
-const resultMessage = document.getElementById("result-message");
-//var for containers
+//var to show/hide elements
 const gameTitle = document.getElementsByClassName("game-title")[0];
 const startPage = document.getElementsByClassName("start-page")[0];
 const questionContainer = document.getElementsByClassName("question-container")[0];
 const scoreContainer = document.getElementsByClassName("score-container")[0];
 const answerContainer = document.getElementById("answer-container");
 const resultContainer = document.getElementsByClassName("result-container")[0];
+const resultMessage = document.getElementById("result-message");
+const questionHeader = document.getElementById("question-header");
 
 //take first question from question array
 let questionsIndex = 0;
 let question = questions[questionsIndex];
-//display question.properties
-questionTitle.innerHTML = question.name;
-questionTransl.innerHTML = question.transl;
-questionInfo.innerHTML = question.info;
-questionAnswer.innerHTML = question.answer;
 
-// Buttons to start the quiz.
-
-//Start button - hides startpage and un-hides questions.
+//Hide startpage, show question.
 startButton.addEventListener("click", function () {
     gameTitle.classList.add("hide");
     startPage.classList.add("hide");
@@ -51,16 +45,17 @@ startButton.addEventListener("click", function () {
     scoreContainer.classList.remove("hide");
     questionButtons.classList.remove("hide");
     questionHeader.classList.remove("hide");
+    getQuestion();
 });
 
-//Eventlisteners to show/hide e
-//question buttons - hides buttons, shows answer.
+//hide question, show answer.
 questionButtons.addEventListener("click", function () {
     questionButtons.classList.add("hide");
     answerContainer.classList.remove("hide");
     compareAnswer();
 });
 
+//get user answer
 kentButton.addEventListener("click", function () {
     userAnswer = 'Kent';
 });
@@ -69,90 +64,55 @@ beckButton.addEventListener("click", function () {
     userAnswer = 'Beck';
 });
 
-let smile = document.getElementById("smile");
-let skull = document.getElementById("skull");
-
-/**
- * compares user answer with answer and counts score
- */
-function compareAnswer() {
-    if( userAnswer === question.answer) {
-        numCorrect++
-        currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
-        //show smile icon hide skull icon
-        smile.classList.remove("hide");
-        skull.classList.add("hide");
-    } else {
-        numWrong++
-        currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
-        //show skull icon hide smile icon
-        skull.classList.remove("hide");
-        smile.classList.add("hide");
-    }
-}
-
-//Next Button - hides answer-container
+//hide answer, show next question/ show result + hide question header
 nextButton.addEventListener("click", function () {
     answerContainer.classList.add("hide");
     questionsIndex++;
     if (questionsIndex < questions.length) {
-        displayNextQuestion();
+        getQuestion();
         questionButtons.classList.remove("hide");
     } else {
         resultMessage.classList.remove("hide");
         resultContainer.classList.remove("hide");
         gameTitle.classList.remove("hide");
         questionHeader.classList.add("hide");
-        questionButtons.classList.add("hide");
     }
 });
 
-//Restart button
+//Show questions / hide results / reset quiz
 restartButton.addEventListener("click", function () {
-    //show/hide elements
     resultContainer.classList.add("hide");
+    gameTitle.classList.add("hide");
+    resultContainer.classList.add("hide");
+    resultMessage.classList.add("hide");
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
     questionButtons.classList.remove("hide");
-    gameTitle.classList.add("hide");
     questionHeader.classList.remove("hide");
-    resultContainer.classList.add("hide");
-    resultMessage.classList.add("hide");
-    //start from first question
-    questionsIndex = 0;
-    question = questions[questionsIndex];
-    //display question.properties
-    questionTitle.innerHTML = question.name;
-    questionTransl.innerHTML = question.transl;
-    questionInfo.innerHTML = question.info;
-    questionAnswer.innerHTML = question.answer;
-    //set correct/wrong answers count to zero
-    numCorrect = 0;
-    numWrong = 0;
-    //display correct answers count
-    currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
-    currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
+    resetQuiz();
 });
 
-// Home button
+// show start page / hide result / reset quiz
 homeButton.addEventListener("click", function () {
-    resultContainer.classList.add("hide");
+    //show startpage / hide result
     startPage.classList.remove("hide");
     resultContainer.classList.add("hide");
     resultMessage.classList.add("hide");
     questionContainer.classList.add("hide");
-    location.reload();
+    resetQuiz();
 });
 
-//functions for pop up button
+//open pop up on button click
 popUpButton.onclick = function () {
     popUp.style.display = "block";
 };
 
+//close pop up on x-mark click
 popUpClose.onclick = function () {
     popUp.style.display = "none";
 };
 
+//close pop up when clicking outside pop up box
 window.onclick = function (event) {
     if (event.target == popUp) {
         popUp.style.display = "none";
@@ -160,15 +120,53 @@ window.onclick = function (event) {
 };
 
 /**
- * gets new question from array and displays it
+ * gets a question from questions(array) and puts in html
  */
- function displayNextQuestion() {
-     question = questions[questionsIndex];
-     questionTitle.innerHTML = question.name;
-     questionTransl.innerHTML = question.transl;
-     questionInfo.innerHTML = question.info;
-     questionAnswer.innerHTML = question.answer;
+ function getQuestion() {
+    question = questions[questionsIndex];
+    questionTitle.innerHTML = question.name;
+    questionTransl.innerHTML = question.transl;
+    questionInfo.innerHTML = question.info;
+    questionAnswer.innerHTML = question.answer;
  }
 
- 
+/**
+* compares user answer with answer and counts score
+*/
+function compareAnswer() {
+    if (userAnswer === question.answer) {
+        numCorrect++;
+        //show smile icon hide skull icon
+        smile.classList.remove("hide");
+        skull.classList.add("hide");
+    } else {
+        numWrong++;
+        //show skull icon hide smile icon
+        skull.classList.remove("hide");
+        smile.classList.add("hide");
+    }
+    currentScore();
+}
 
+/**
+ * display current score
+ */
+function currentScore() {
+    currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
+    currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
+}
+
+/**
+ * start from first question and reset score
+ */
+function resetQuiz() {
+    //start from first question
+    questionsIndex = 0;
+    question = questions[questionsIndex];
+    getQuestion();
+    //set correct/wrong answers count to zero
+    numCorrect = 0;
+    numWrong = 0;
+    //display correct answers count
+    currentScore();
+}
