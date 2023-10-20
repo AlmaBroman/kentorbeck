@@ -119,6 +119,7 @@ homeButton.addEventListener("click", function () {
     resultContainer.classList.add("hide");
     resultMessage.classList.add("hide");
     questionContainer.classList.add("hide");
+    location.reload();
 });
 
 let questionsIndex = 0;
