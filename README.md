@@ -1,36 +1,43 @@
 # Kent or Beck
-Have you ever noticed that the song titles by swedish alt-rock band are similar to the titles of swedish movie series Beck? 
+Have you ever noticed that the song titles by swedish alt-rock band Kent are similar to the titles of swedish movie series Beck? 
 
 This is a quiz designed to test if you can differ a song title from a movie title. The aim for the website is to provide simple entertainment for beck-lovers, kent-lovers or just regular swedish people between their 20s and 30s.
 
-<img width="1035" alt="kentorbeck-resp" src="https://github.com/AlmaBroman/kentorbeck/assets/144612949/db02209c-88ad-49a0-9318-6304c5eaedde">
-responsive 
+![Responsive mockup](readme-assets/kentorbeck-resp.png)
 
-(wireframe img here)
+![Wireframe img](readme-assets/kent-or-beck-wireframe.png)
 
 **Wireframe**
- - The wireframe was designed using Balsamiq software.
+- The wireframe was designed using Balsamiq software.
 
 ## Existing features
 
-![Start Page img](img link here)
-![Start Page + popup img](img link here)
+![Start Page img](readme-assets/Startpage.png)
 
 - **Start Page**
-  - title of the game
-  - short description of the game
-  - instructions button to show pop up window with game instructions
+  - Title of the game
+  - Short description of the game
+  - Instructions button to show pop up window
   - Start the quiz button to start quiz
 
-![Question display img](img link here)
+![Pop up img](readme-assets/pop-up.png)
+
+- **StartPage pop up**
+  - Instructions for the game
+  - click on x-mark or outside popup box to close pop up
+  
+![Question display img](readme-assets/questiondisplay.png)
 
 - **Question display**
   - song/movie title
   - english translation of the title
   - buttons for choosing what to answer
-  - score counter
+  - score counter that updates when answer is submitted
 
-![Answer display img](img link here)
+![Answer display img](readme-assets/right-answer-display.png)
+or
+
+![Answer display img](readme-assets/wrong-answer-display.png)
 
 - **Answer display**
   - song/movie title
@@ -38,10 +45,10 @@ responsive
   - icon to indicate right/wrong answer
   - right answer
   - director/album + year
-  - button for displaying next question
-  - score counter
+  - button for displaying next question (new title is displayed) or final score (final score is displayed)
+  - score counter is updated
 
-![Final Score display img](img link here)
+![Final Score display img](readme-assets/final-score-display.png)
 
 - **Final Score display**
   - title of the game
@@ -49,6 +56,12 @@ responsive
   - final score is shown
   - button for restarting the quiz(returns user to question display)
   - button for returning to start page.
+
+## Languages used
+
+- HTML5
+- CSS
+- JavaScript
 
 ## Testing
 
@@ -71,7 +84,9 @@ The site was tested in google chrome developer tools, on iphone 12 mini (Safari)
 ### Bugs
 
  - Solved bugs
-   - kwrite about bugs that were solved here.
+   - Both icons were showing and would not let style be overwritten. Solved by moving fontawesome path from bottom of body in html to above stylesheet path in html head.
+   - Pop up box function for closing pop up box when clicking outside window would not work when clicking above pop up window. Solved by setting top property of  pop up styles to 0 and changing top/down margin of  pop-up-content.
+
 
 ## Deployment
 
@@ -82,8 +97,6 @@ The site was tested in google chrome developer tools, on iphone 12 mini (Safari)
 
 The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 
-## Credits
-
 ### Content
 
 - The info for questions were gathered from wikipedia: 
@@ -93,11 +106,10 @@ The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 - Cursor effect was created by following this tutorial: <https://www.w3schools.com/cssref/pr_class_cursor.php>
 - Transformed hex value to rgba using: <https://www.w3schools.com/colors/colors_converter.asp>
 
-
-
 ### Additional resources used in this project include
 
 - Guidance in flexbox usage from <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>.
+- understanding objects and object properties <https://www.w3schools.com/js/js_objects.asp>
 - Guidance in fontpicking from <https://www.w3schools.com/cssref/css_websafe_fonts.php>.
 - Understanding arrays better by reading <https://www.w3schools.com/js/js_arrays.asp>
 - refreshing memory on html DOM textContent <https://www.w3schools.com/jsref/prop_node_textcontent.asp>
