@@ -13,8 +13,6 @@ let currentNumberCorrect = document.getElementById("correct-answers");
 let currentNumberWrong = document.getElementById("wrong-answers");
 let numCorrect = 0;
 let numWrong = 0;
-let smile = document.getElementById("smile");
-let skull = document.getElementById("skull")
 //var for options buttons
 const kentButton = document.getElementById("opt-kent");
 const beckButton = document.getElementById("opt-beck");
@@ -60,19 +58,19 @@ startButton.addEventListener("click", function () {
 questionButtons.addEventListener("click", function () {
     questionButtons.classList.add("hide");
     answerContainer.classList.remove("hide");
+    compareAnswer();
 });
 
 kentButton.addEventListener("click", function () {
     userAnswer = 'Kent';
-    console.log(userAnswer)
-    compareAnswer();
 });
 
 beckButton.addEventListener("click", function () {
     userAnswer = 'Beck';
-    console.log(userAnswer)
-    compareAnswer();
 });
+
+let smile = document.getElementById("smile");
+let skull = document.getElementById("skull");
 
 /**
  * compares user answer with answer and counts score
@@ -81,29 +79,31 @@ function compareAnswer() {
     if( userAnswer === question.answer) {
         numCorrect++
         currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
+        //show smile icon hide skull icon
+        smile.classList.remove("hide");
+        skull.classList.add("hide");
     } else {
         numWrong++
         currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
+        //show skull icon hide smile icon
+        skull.classList.remove("hide");
+        smile.classList.add("hide");
     }
 }
 
 //Next Button - hides answer-container
 nextButton.addEventListener("click", function () {
-    questionButtons.classList.remove("hide");
     answerContainer.classList.add("hide");
     questionsIndex++;
     if (questionsIndex < questions.length) {
         displayNextQuestion();
         questionButtons.classList.remove("hide");
-        answerContainer.classList.add("hide");
     } else {
         resultMessage.classList.remove("hide");
         resultContainer.classList.remove("hide");
         gameTitle.classList.remove("hide");
         questionHeader.classList.add("hide");
-        answerContainer.classList.add("hide");
         questionButtons.classList.add("hide");
-
     }
 });
 
