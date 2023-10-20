@@ -3,12 +3,13 @@ Have you ever noticed that the song titles by swedish alt-rock band are similar 
 
 This is a quiz designed to test if you can differ a song title from a movie title. The aim for the website is to provide simple entertainment for beck-lovers, kent-lovers or just regular swedish people between their 20s and 30s.
 
-![Responsive mockup](img link here)
+<img width="1035" alt="kentorbeck-resp" src="https://github.com/AlmaBroman/kentorbeck/assets/144612949/db02209c-88ad-49a0-9318-6304c5eaedde">
+responsive 
+
+(wireframe img here)
 
 **Wireframe**
-The wireframe was designed using Balsamiq software.
-
-![Wireframe img](img link here)
+ - The wireframe was designed using Balsamiq software.
 
 ## Existing features
 
