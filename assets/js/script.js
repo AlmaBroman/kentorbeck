@@ -13,6 +13,12 @@ let currentNumberCorrect = document.getElementById("correct-answers");
 let currentNumberWrong = document.getElementById("wrong-answers");
 let numCorrect = 0;
 let numWrong = 0;
+let userAnswer = '';
+let smile = document.getElementById("smile");
+let skull = document.getElementById("skull")
+//var for options buttons
+const kentButton = document.getElementById("opt-kent");
+const beckButton = document.getElementById("opt-beck");
 //var for eventlisteners buttons
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementsByClassName("next-button")[0];
@@ -28,24 +34,15 @@ const questionContainer = document.getElementsByClassName("question-container")[
 const scoreContainer = document.getElementsByClassName("score-container")[0];
 const answerContainer = document.getElementById("answer-container");
 const resultContainer = document.getElementsByClassName("result-container")[0];
-//var for options buttons
-const kentButton = document.getElementById("opt-kent");
-const beckButton = document.getElementById("opt-beck");
 
-//functions for pop up button
-popUpButton.onclick = function () {
-    popUp.style.display = "block";
-};
-
-popUpClose.onclick = function () {
-    popUp.style.display = "none";
-};
-
-window.onclick = function (event) {
-    if (event.target == popUp) {
-        popUp.style.display = "none";
-    }
-};
+//take question from question array
+let questionsIndex = 0;
+let question = questions[questionsIndex];
+//display question.properties
+questionTitle.innerHTML = question.name;
+questionTransl.innerHTML = question.transl;
+questionInfo.innerHTML = question.info;
+questionAnswer.innerHTML = question.answer;
 
 // Buttons to start the quiz.
 
@@ -66,21 +63,34 @@ questionButtons.addEventListener("click", function () {
     answerContainer.classList.remove("hide");
 });
 
+kentButton.addEventListener("click", function () {
+    userAnswer = 'Kent';
+    console.log(userAnswer)
+    compareAnswer();
+});
+
+beckButton.addEventListener("click", function () {
+    userAnswer = 'Beck';
+    console.log(userAnswer)
+    compareAnswer();
+});
+console.log(userAnswer)
+
+/**
+ * compares user answer with answer and counts score
+ */
+function compareAnswer() {
+    if( userAnswer === question.answer) {
+        numCorrect++
+        currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
+    } else {
+        numWrong++
+        currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
+    }
+}
+
 //Next Button - hides answer-container
 nextButton.addEventListener("click", function () {
-    /** 
-     * if last question do: 
-     * answerContainer.classList.add("hide");
-     * questionHeader.classList.add("hide");
-     * gameTitle.classList.remove("hide");
-     * resultContainer.classList.remove("hide");
-     * resultMessage.classList.remove("hide");
-     * else: 
-     *  answerContainer.classList.add("hide");
-     * questionButtons.classList.remove("hide");
-     */
-
-    //if not last question
     questionButtons.classList.remove("hide");
     answerContainer.classList.add("hide");
     questionsIndex++;
@@ -95,9 +105,8 @@ nextButton.addEventListener("click", function () {
         questionHeader.classList.add("hide");
         answerContainer.classList.add("hide");
         questionButtons.classList.add("hide");
-        
+
     }
-    console.log(question.name)
 });
 
 //Restart button
@@ -122,16 +131,24 @@ homeButton.addEventListener("click", function () {
     location.reload();
 });
 
-let questionsIndex = 0;
+//functions for pop up button
+popUpButton.onclick = function () {
+    popUp.style.display = "block";
+};
 
-//take question from question array
-let question = questions[questionsIndex];
-//display object properties in html
-questionTitle.innerHTML = question.name;
-questionTransl.innerHTML = question.transl;
-questionInfo.innerHTML = question.info;
-questionAnswer.innerHTML = question.answer;
+popUpClose.onclick = function () {
+    popUp.style.display = "none";
+};
 
+window.onclick = function (event) {
+    if (event.target == popUp) {
+        popUp.style.display = "none";
+    }
+};
+
+/**
+ * gets new question from array and displays it
+ */
  function displayNextQuestion() {
      question = questions[questionsIndex];
      questionTitle.innerHTML = question.name;
@@ -139,3 +156,6 @@ questionAnswer.innerHTML = question.answer;
      questionInfo.innerHTML = question.info;
      questionAnswer.innerHTML = question.answer;
  }
+
+ 
+
