@@ -109,6 +109,7 @@ nextButton.addEventListener("click", function () {
 
 //Restart button
 restartButton.addEventListener("click", function () {
+    //show/hide elements
     resultContainer.classList.add("hide");
     questionContainer.classList.remove("hide");
     scoreContainer.classList.remove("hide");
@@ -117,7 +118,7 @@ restartButton.addEventListener("click", function () {
     questionHeader.classList.remove("hide");
     resultContainer.classList.add("hide");
     resultMessage.classList.add("hide");
-    //take first question from array
+    //start from first question
     questionsIndex = 0;
     question = questions[questionsIndex];
     //display question.properties
@@ -125,8 +126,12 @@ restartButton.addEventListener("click", function () {
     questionTransl.innerHTML = question.transl;
     questionInfo.innerHTML = question.info;
     questionAnswer.innerHTML = question.answer;
-    //numCorrect -> 0
-    //numWrong -> 0
+    //set correct/wrong answers count to zero
+    numCorrect = 0;
+    numWrong = 0;
+    //display correct answers count
+    currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
+    currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
 });
 
 // Home button
