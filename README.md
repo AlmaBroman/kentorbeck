@@ -1,39 +1,119 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Kent or Beck
+Have you ever noticed that the song titles by swedish alt-rock band are similar to the titles of swedish movie series Beck? 
 
-Welcome,
+This is a quiz designed to test if you can differ a song title from a movie title. The aim for the website is to provide simple entertainment for beck-lovers, kent-lovers or just regular swedish people between their 20s and 30s.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive mockup](img link here)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+**Wireframe**
+The wireframe was designed using Balsamiq software.
 
-## Codeanywhere Reminders
+![Wireframe img](img link here)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Existing features
 
-`python3 -m http.server`
+![Start Page img](img link here)
+![Start Page + popup img](img link here)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **Start Page**
+  - title of the game
+  - short description of the game
+  - instructions button to show pop up window with game instructions
+  - Start the quiz button to start quiz
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+![Question display img](img link here)
 
-`http_server`
+- **Question display**
+  - song/movie title
+  - english translation of the title
+  - buttons for choosing what to answer
+  - score counter
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Answer display img](img link here)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **Answer display**
+  - song/movie title
+  - english translation of the title
+  - icon to indicate right/wrong answer
+  - right answer
+  - director/album + year
+  - button for displaying next question
+  - score counter
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Final Score display img](img link here)
 
-To log into the Heroku toolbelt CLI:
+- **Final Score display**
+  - title of the game
+  - text to inform player that they have answered all the questions
+  - final score is shown
+  - button for restarting the quiz(returns user to question display)
+  - button for returning to start page.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Testing
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The site was tested in google chrome developer tools, on iphone 12 mini (Safari) and MacBook Pro 13' (google chrome).
 
----
+### Validator Testing
 
-Happy coding!
+- HTML
+  - No errors were returned when passing through the official W3C validator (<https://validator.w3.org/nu/#textarea>).
+
+- CSS
+  - No errors were found when passing through the official (Jigsaw) validator (<https://jigsaw.w3.org/css-validator/validator>).
+
+- Contrast Checker
+  - The contrasts was proven ok using the WebAIM contrast checker (<https://webaim.org/resources/contrastchecker/>).
+
+- JavaScript
+  - No errors were found when passing through JSHint (<https://jshint.com/>).
+
+### Bugs
+
+ - Solved bugs
+   - kwrite about bugs that were solved here.
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - <https://almabroman.github.io/kentorbeck/>
+
+## Credits
+
+### Content
+
+- The info for questions were gathered from wikipedia: 
+   - <https://sv.wikipedia.org/wiki/Kents_diskografi>
+   -  <https://sv.wikipedia.org/wiki/Martin_Beck_(filmatiseringar)>.
+- Modal (pop up) was created by following step by step instructions from w3 school: <https://www.w3schools.com/howto/howto_css_modals.asp>
+- Cursor effect was created by following this tutorial: <https://www.w3schools.com/cssref/pr_class_cursor.php>
+- Transformed hex value to rgba using: <https://www.w3schools.com/colors/colors_converter.asp>
+
+
+
+### Additional resources used in this project include
+
+- Guidance in flexbox usage from <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>.
+- Guidance in fontpicking from <https://www.w3schools.com/cssref/css_websafe_fonts.php>.
+- Understanding arrays better by reading <https://www.w3schools.com/js/js_arrays.asp>
+- refreshing memory on html DOM textContent <https://www.w3schools.com/jsref/prop_node_textcontent.asp>
+- Javascript testing along the way <https://pythontutor.com/visualize.html#mode=edit>
+- Inspiration from other students:
+  - https://haniibani.github.io/Pp2/
+  - https://sediqa01.github.io/Word-Guessing-Game/index.html
+  - https://davidcalikes.github.io/Marvelous-Matching/shapes.html
+  - https://rachaelbabister.github.io/lyric-quiz/
+
+### Media
+
+- the favicon was created using favicon.io. And implemented with help of <https://www.w3schools.com/html/html_favicon.asp>.
+- The icons showed when answering a question were taken from <https://fontawesome.com/>.
+- Image to display webite responsiveness: <https://ui.dev/amiresponsive?url=https://almabroman.github.io/kentorbeck/>.
+
+### Acknowledgements
+
+- Support from my mentor Medale Oluwafemi
+- Support/tips on rubberducking from Johannes Wärn
