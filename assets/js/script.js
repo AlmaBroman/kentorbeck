@@ -2,18 +2,11 @@
 let popUp = document.getElementById("pop-up-box");
 let popUpButton = document.getElementById("open-pop-up");
 let popUpClose = document.getElementsByClassName("close-pop-up")[0];
-//var for getQuestion
-let questionTitle = document.getElementById("question-title");
-let questionTransl = document.getElementById("question-transl");
-let questionInfo = document.getElementById("answer-info");
-let questionAnswer = document.getElementById("answer-is");
 //var for score/results
-let currentNumberCorrect = document.getElementById("correct-answers");
-let currentNumberWrong = document.getElementById("wrong-answers");
 let numCorrect = 0;
 let numWrong = 0;
-let smile = document.getElementById("smile");
-let skull = document.getElementById("skull");
+const smile = document.getElementById("smile");
+const skull = document.getElementById("skull");
 //var for options buttons
 const kentButton = document.getElementById("opt-kent");
 const beckButton = document.getElementById("opt-beck");
@@ -122,13 +115,13 @@ window.onclick = function (event) {
 /**
  * gets a question from questions(array) and puts in html
  */
- function getQuestion() {
+function getQuestion() {
     question = questions[questionsIndex];
-    questionTitle.innerHTML = question.name;
-    questionTransl.innerHTML = question.transl;
-    questionInfo.innerHTML = question.info;
-    questionAnswer.innerHTML = question.answer;
- }
+    document.getElementById("question-title").innerHTML = question.name;
+    document.getElementById("question-transl").innerHTML = question.transl;
+    document.getElementById("answer-info").innerHTML = question.info;
+    document.getElementById("answer-is").innerHTML = question.answer;
+}
 
 /**
 * compares user answer with answer and counts score
@@ -152,8 +145,8 @@ function compareAnswer() {
  * display current score
  */
 function currentScore() {
-    currentNumberWrong.innerHTML = 'Wrong Answers: ' + numWrong;
-    currentNumberCorrect.innerHTML = 'Correct Answers: ' + numCorrect;
+    document.getElementById("wrong-answers").innerHTML = 'Wrong Answers: ' + numWrong;
+    document.getElementById("correct-answers").innerHTML = 'Correct Answers: ' + numCorrect;
 }
 
 /**

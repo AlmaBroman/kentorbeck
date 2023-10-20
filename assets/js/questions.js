@@ -13,13 +13,13 @@ const questions = [
     },
     {
         name: 'Avtryck',
-        transl: 'Imprint',
+        transl: '"Imprint"',
         info: 'Verkligen, 1996',
         answer: 'Kent',
     },
     {
         name: 'En Timme en Minut',
-        transl: 'One Hour One Minute',
+        transl: '"One Hour One Minute"',
         info: 'Verkligen, 1996',
         answer: 'Kent',
     },
@@ -31,7 +31,7 @@ const questions = [
     },
     {
         name: 'Pojken med Hålet I Handen',
-        transl: 'The Boy with a Hole in his Hand',
+        transl: '"The Boy with a Hole in his Hand"',
         info: 'Kent, 1995',
         answer: 'Kent',
     },
@@ -49,7 +49,7 @@ const questions = [
     },
     {
         name: 'Stenbrott',
-        transl: 'Quarry',
+        transl: '"Quarry"',
         info: 'Kent, 1995',
         answer: 'Kent',
     },
