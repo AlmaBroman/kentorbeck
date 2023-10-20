@@ -6,16 +6,10 @@ const questions = [
         answer: 'Kent',
     },
     {
-        name: 'Pojken med Hålet I Handen',
-        transl: 'The Boy with a Hole in his Hand',
-        info: 'Kent, 1995',
-        answer: 'Kent',
-    },
-    {
-        name: 'Stenbrott',
-        transl: 'Quarry',
-        info: 'Kent, 1995', 
-        answer: 'Kent',
+        name: 'Spår i Mörker',
+        transl: '"Trails in Darkness"',
+        info: '(Morten Arnfred, 1998)',
+        answer: 'Beck',
     },
     {
         name: 'Avtryck',
@@ -36,6 +30,12 @@ const questions = [
         answer: 'Beck',
     },
     {
+        name: 'Pojken med Hålet I Handen',
+        transl: 'The Boy with a Hole in his Hand',
+        info: 'Kent, 1995',
+        answer: 'Kent',
+    },
+    {
         name: 'Mannen med Ikonerna',
         transl: '"The Man With The Icons"',
         info: '(Pelle Seth, 1997)',
@@ -48,15 +48,15 @@ const questions = [
         answer: 'Beck',
     },
     {
+        name: 'Stenbrott',
+        transl: 'Quarry',
+        info: 'Kent, 1995',
+        answer: 'Kent',
+    },
+    {
         name: 'Öga för Öga',
         transl: '"Eye for an Eye"',
         info: '(Kjell Sundvall, 1997)', 
-        answer: 'Beck',
-    },
-    {
-        name: 'Spår i Mörker',
-        transl: '"Trails in Darkness"',
-        info: '(Morten Arnfred, 1998)',
         answer: 'Beck',
     },
 ];
