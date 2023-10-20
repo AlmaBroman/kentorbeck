@@ -97,12 +97,11 @@ p {
     font-size: 1.5rem;
 }
 
-/* Score Container */
-.score-container {
-    margin-top: 100px;
+/* Answer Container */
+.answer-container {
+    padding-bottom: 20px;
 }
 
-/* Answer Container */
 .answer-icon {
     font-size: xxx-large;
     padding-bottom: 20px;
