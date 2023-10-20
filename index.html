@@ -1,94 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon_io/favicon.ico">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon_io/favicon.ico"
+    />
     <title>Kent or Beck?</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header class="game-title">
-        <h1>Kent or Beck?</h1>
+      <h1>Kent or Beck?</h1>
     </header>
 
     <!-- Start Page -->
     <div class="start-page">
-        <p class="start-page-text">Do you know if the title shown is a Kent song or a
-            movie in the Beck series?</p>
-        <button id="open-pop-up">Instructions</button>
-        <!-- Pop-up content -->
-        <div id="pop-up-box" class="pop-up">
-            <div class="pop-up-content">
-                <span class="close-pop-up"><i class="fa-solid fa-x"></i></span>
-                <div id="pop-up-text">
-                    <h3>Instructions</h3>
-                    <p>Each turn you will be presented with a title and two buttons labeled "Kent" and "Beck".</p>
-                    <p>Press "Kent" if you think it is the title of a song or press "Beck" if you think it is the title of a
-                        movie.</p>
-                    <p>The right answer will then be shown and a button to proceed to the next title.</p>
-                    <p>The game includes 40+ titles so feel free to play again and again!</p>
-                </div>
-            </div>
+      <p class="start-page-text">
+        Do you know if the title shown is a Kent song or a movie in the Beck
+        series?
+      </p>
+      <button id="open-pop-up">Instructions</button>
+      <!-- Pop-up content -->
+      <div id="pop-up-box" class="pop-up">
+        <div class="pop-up-content">
+          <span class="close-pop-up"><i class="fa-solid fa-x"></i></span>
+          <div id="pop-up-text">
+            <h3>Instructions</h3>
+            <p>
+              Each turn you will be presented with a title and two buttons
+              labeled "Kent" and "Beck".
+            </p>
+            <p>
+              Press "Kent" if you think it is the title of a song or press
+              "Beck" if you think it is the title of a movie.
+            </p>
+            <p>
+              The right answer will then be shown and a button to proceed to the
+              next title.
+            </p>
+            <p>
+              The game includes 40+ titles so feel free to play again and again!
+            </p>
+          </div>
         </div>
-        <br>
-        <button id="start-button">Start the quiz</button>
+      </div>
+      <br />
+      <button id="start-button">Start the quiz</button>
     </div>
 
     <!-- Question Container-->
     <div class="question-container hide">
-        <!-- Question Header -->
-        <header id="question-header">
-            <h1 class="question-title" id="question-title">"questionName"</h1>
-            <h2 class="question-title-eng" id="question-transl">"questionTransl"</h2>
-        </header>
-        <!-- Options Container-->
-        <div class="question-buttons">
-            <button class="question-button" id="opt-kent">Kent</button>
-            <p>or</p>
-            <button class="question-button" id="opt-beck">Beck</button>
-        </div>
-        
-        <!-- Answer Container-->
-        <div id="answer-container" class="hide">
-            <i class="fa-solid fa-face-smile answer-icon" id="smile" style="color: #ffffff;"></i>
-            <i class="fa-solid fa-skull answer-icon" id="skull" style="color: #ffffff;"></i>
-            <div>
-                <p id="answer-is">"kent"</p>
-                <p id="answer-info">"questionDirOrAlb", "questionYear"</p>
-            </div>
-            <button class="next-button">Next</button>
-        </div>
+      <!-- Question Header -->
+      <header id="question-header">
+        <h1 class="question-title" id="question-title">"questionName"</h1>
+        <h2 class="question-title-eng" id="question-transl">
+          "questionTransl"
+        </h2>
+      </header>
+      <!-- Options Container-->
+      <div class="question-buttons">
+        <button class="question-button" id="opt-kent">Kent</button>
+        <p>or</p>
+        <button class="question-button" id="opt-beck">Beck</button>
+      </div>
 
-        <!-- Score container -->
-        <div class="score-container">
-            <div class="hide" id="result-message">
-            <h2>You completed the quiz!</h2>
-            <h3 class="final-score">Final Score</h3>
-            </div>
-            <p id="correct-answers">Correct answers: 0 </p>
-            <p id="wrong-answers">Wrong answers: 0</p>
+      <!-- Answer Container-->
+      <div id="answer-container" class="hide">
+        <i
+          class="fa-solid fa-face-smile answer-icon"
+          id="smile"
+          style="color: #ffffff"
+        ></i>
+        <i
+          class="fa-solid fa-skull answer-icon"
+          id="skull"
+          style="color: #ffffff"
+        ></i>
+        <div>
+          <p id="answer-is">"kent"</p>
+          <p id="answer-info">"questionDirOrAlb", "questionYear"</p>
         </div>
+        <button class="next-button">Next</button>
+      </div>
+
+      <!-- Score container -->
+      <div class="score-container">
+        <div class="hide" id="result-message">
+          <h2>You completed the quiz!</h2>
+          <h3 class="final-score">Final Score</h3>
+        </div>
+        <p id="correct-answers">Correct answers: 0</p>
+        <p id="wrong-answers">Wrong answers: 0</p>
+      </div>
     </div>
 
     <!-- Results -->
     <div class="result-container hide">
-        <button id="restart-button">Restart the quiz</button>
-        <br>
-        <button id="home-button">Back to homepage</button>
+      <button id="restart-button">Restart the quiz</button>
+      <br />
+      <button id="home-button">Back to homepage</button>
     </div>
 
     <!-- Hidden Footer -->
     <footer hidden>Nothing to see here!</footer>
 
     <!-- Font Awesome Kit-->
-    <script src="https://kit.fontawesome.com/bd539d3b84.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/bd539d3b84.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Java Script -->
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
