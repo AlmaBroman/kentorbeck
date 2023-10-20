@@ -84,7 +84,19 @@ nextButton.addEventListener("click", function () {
     questionButtons.classList.remove("hide");
     answerContainer.classList.add("hide");
     questionsIndex++;
-    displayNextQuestion();
+    if (questionsIndex < questions.length) {
+        displayNextQuestion();
+        questionButtons.classList.remove("hide");
+        answerContainer.classList.add("hide");
+    } else {
+        resultMessage.classList.remove("hide");
+        resultContainer.classList.remove("hide");
+        gameTitle.classList.remove("hide");
+        questionHeader.classList.add("hide");
+        answerContainer.classList.add("hide");
+        questionButtons.classList.add("hide");
+        
+    }
     console.log(question.name)
 });
 
