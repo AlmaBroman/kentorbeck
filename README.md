@@ -1,5 +1,6 @@
 # Kent or Beck
-Have you ever noticed that the song titles by swedish alt-rock band Kent are similar to the titles of swedish movie series Beck? 
+
+Have you ever noticed that the song titles by swedish alt-rock band Kent are similar to the titles of swedish movie series Beck?
 
 This is a quiz designed to test if you can differ a song title from a movie title. The aim for the website is to provide simple entertainment for beck-lovers, kent-lovers or just regular swedish people between their 20s and 30s.
 
@@ -8,6 +9,7 @@ This is a quiz designed to test if you can differ a song title from a movie titl
 ![Wireframe img](readme-assets/kent-or-beck-wireframe.png)
 
 **Wireframe**
+
 - The wireframe was designed using Balsamiq software.
 
 ## Existing features
@@ -83,10 +85,9 @@ The site was tested in google chrome developer tools, on iphone 12 mini (Safari)
 
 ### Bugs
 
- - Solved bugs
-   - Both icons were showing and would not let style be overwritten. Solved by moving fontawesome path from bottom of body in html to above stylesheet path in html head.
-   - Pop up box function for closing pop up box when clicking outside window would not work when clicking above pop up window. Solved by setting top property of  pop up styles to 0 and changing top/down margin of  pop-up-content.
-
+- Solved bugs
+  - Both icons were showing and would not let style be overwritten. Solved by moving fontawesome path from bottom of body in html to above stylesheet path in html head.
+  - Pop up box function for closing pop up box when clicking outside window would not work when clicking above pop up window. Solved by setting top property of  pop up styles to 0 and changing top/down margin of  pop-up-content.
 
 ## Deployment
 
@@ -99,9 +100,9 @@ The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 
 ### Content
 
-- The info for questions were gathered from wikipedia: 
-   - <https://sv.wikipedia.org/wiki/Kents_diskografi>
-   -  <https://sv.wikipedia.org/wiki/Martin_Beck_(filmatiseringar)>.
+- The info for questions were gathered from wikipedia:
+  - <https://sv.wikipedia.org/wiki/Kents_diskografi>
+  - <https://sv.wikipedia.org/wiki/Martin_Beck_(filmatiseringar)>.
 - Modal (pop up) was created by following step by step instructions from w3 school: <https://www.w3schools.com/howto/howto_css_modals.asp>
 - Cursor effect was created by following this tutorial: <https://www.w3schools.com/cssref/pr_class_cursor.php>
 - Transformed hex value to rgba using: <https://www.w3schools.com/colors/colors_converter.asp>
@@ -115,10 +116,10 @@ The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 - refreshing memory on html DOM textContent <https://www.w3schools.com/jsref/prop_node_textcontent.asp>
 - Javascript testing along the way <https://pythontutor.com/visualize.html#mode=edit>
 - Inspiration from other students:
-  - https://haniibani.github.io/Pp2/
-  - https://sediqa01.github.io/Word-Guessing-Game/index.html
-  - https://davidcalikes.github.io/Marvelous-Matching/shapes.html
-  - https://rachaelbabister.github.io/lyric-quiz/
+  - <https://haniibani.github.io/Pp2/>
+  - <https://sediqa01.github.io/Word-Guessing-Game/index.html>
+  - <https://davidcalikes.github.io/Marvelous-Matching/shapes.html>
+  - <https://rachaelbabister.github.io/lyric-quiz/>
 
 ### Media
 
