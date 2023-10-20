@@ -13,7 +13,6 @@ let currentNumberCorrect = document.getElementById("correct-answers");
 let currentNumberWrong = document.getElementById("wrong-answers");
 let numCorrect = 0;
 let numWrong = 0;
-let userAnswer = '';
 let smile = document.getElementById("smile");
 let skull = document.getElementById("skull")
 //var for options buttons
@@ -35,7 +34,7 @@ const scoreContainer = document.getElementsByClassName("score-container")[0];
 const answerContainer = document.getElementById("answer-container");
 const resultContainer = document.getElementsByClassName("result-container")[0];
 
-//take question from question array
+//take first question from question array
 let questionsIndex = 0;
 let question = questions[questionsIndex];
 //display question.properties
@@ -74,7 +73,6 @@ beckButton.addEventListener("click", function () {
     console.log(userAnswer)
     compareAnswer();
 });
-console.log(userAnswer)
 
 /**
  * compares user answer with answer and counts score
@@ -119,6 +117,16 @@ restartButton.addEventListener("click", function () {
     questionHeader.classList.remove("hide");
     resultContainer.classList.add("hide");
     resultMessage.classList.add("hide");
+    //take first question from array
+    questionsIndex = 0;
+    question = questions[questionsIndex];
+    //display question.properties
+    questionTitle.innerHTML = question.name;
+    questionTransl.innerHTML = question.transl;
+    questionInfo.innerHTML = question.info;
+    questionAnswer.innerHTML = question.answer;
+    //numCorrect -> 0
+    //numWrong -> 0
 });
 
 // Home button
