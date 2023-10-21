@@ -14,6 +14,14 @@ This is a quiz designed to test if you can differ a song title from a movie titl
 
 ## Existing features
 
+How the game works:
+ - you click start
+ - you are shown a title of a movie or a song
+ - you choose a button to choose one out of two possible answers
+ - the answer is revealed and your score is counted
+ - the game consists of 10 questions
+ - when answering all question your final score is revealed.
+
 ![Start Page img](readme-assets/Startpage.png)
 
 ### Start Page
