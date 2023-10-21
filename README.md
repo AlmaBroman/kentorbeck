@@ -15,12 +15,13 @@ This is a quiz designed to test if you can differ a song title from a movie titl
 ## Existing features
 
 How the game works:
- - you click start
- - you are shown a title of a movie or a song
- - you choose a button to choose one out of two possible answers
- - the answer is revealed and your score is counted
- - the game consists of 10 questions
- - when answering all question your final score is revealed.
+
+- you click start
+- you are shown a title of a movie or a song
+- you choose a button to choose one out of two possible answers
+- the answer is revealed and your score is counted
+- the game consists of 10 questions
+- when answering all question your final score is revealed.
 
 ![Start Page img](readme-assets/Startpage.png)
 
@@ -120,7 +121,7 @@ The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 - Cursor effect was created by following this tutorial: <https://www.w3schools.com/cssref/pr_class_cursor.php>
 - Transformed hex value to rgba using: <https://www.w3schools.com/colors/colors_converter.asp>
 
-### Additional resources used in this project include:
+### Additional resources used in this project include
 
 - Guidance in flexbox usage from <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>.
 - understanding objects and object properties <https://www.w3schools.com/js/js_objects.asp>
