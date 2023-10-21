@@ -16,48 +16,53 @@ This is a quiz designed to test if you can differ a song title from a movie titl
 
 ![Start Page img](readme-assets/Startpage.png)
 
-- **Start Page**
-  - Title of the game
-  - Short description of the game
-  - Instructions button to show pop up window
-  - Start the quiz button to start quiz
+### Start Page
+
+- Displays the title of the game
+- Short description of the game
+- Instructions button thatdisplays pop up window
+- Start the quiz button to start quiz
 
 ![Pop up img](readme-assets/pop-up.png)
 
-- **StartPage pop up**
-  - Instructions for the game
-  - click on x-mark or outside popup box to close pop up
+#### Start Page pop up
+
+- Instructions for the game
+- click on x-mark or outside popup box to close pop up
   
 ![Question display img](readme-assets/questiondisplay.png)
 
-- **Question display**
-  - song/movie title
-  - english translation of the title
-  - buttons for choosing what to answer
-  - score counter that updates when answer is submitted
+### Question display
+
+- song/movie title
+- english translation of the title
+- buttons for choosing what to answer
+- score counter that updates when answer is submitted
 
 ![Answer display img](readme-assets/right-answer-display.png)
 or
 
 ![Answer display img](readme-assets/wrong-answer-display.png)
 
-- **Answer display**
-  - song/movie title
-  - english translation of the title
-  - icon to indicate right/wrong answer
-  - right answer
-  - director/album + year
-  - button for displaying next question (new title is displayed) or final score (final score is displayed)
-  - score counter is updated
+### Answer display
+
+- song/movie title
+- english translation of the title
+- icon to indicate right/wrong answer
+- right answer
+- director/album + year
+- button for displaying next question (new title is displayed) or final score (final score is displayed)
+- score counter is updated
 
 ![Final Score display img](readme-assets/final-score-display.png)
 
-- **Final Score display**
-  - title of the game
-  - text to inform player that they have answered all the questions
-  - final score is shown
-  - button for restarting the quiz(returns user to question display)
-  - button for returning to start page.
+### Final Score display
+
+- title of the game
+- text to inform player that they have answered all the questions
+- final score is shown
+- button for restarting the quiz(returns user to question display)
+- button for returning to start page.
 
 ## Languages used
 
@@ -107,7 +112,7 @@ The live link can be found here - <https://almabroman.github.io/kentorbeck/>
 - Cursor effect was created by following this tutorial: <https://www.w3schools.com/cssref/pr_class_cursor.php>
 - Transformed hex value to rgba using: <https://www.w3schools.com/colors/colors_converter.asp>
 
-### Additional resources used in this project include
+### Additional resources used in this project include:
 
 - Guidance in flexbox usage from <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>.
 - understanding objects and object properties <https://www.w3schools.com/js/js_objects.asp>
